@@ -10,7 +10,6 @@ public class TankMovement : MonoBehaviour
     public AudioClip m_EngineDriving;
     public float m_PitchRange = 0.2f;
 
-
     private string m_MovementAxisName;
     private string m_TurnAxisName;
     private Rigidbody m_Rigidbody;
@@ -61,7 +60,7 @@ public class TankMovement : MonoBehaviour
     private void EngineAudio()
     {
         // Play the correct audio clip based on whether or not the tank is moving and what audio is currently playing.
-        if (Mathf.Abs (m_MovementInputValue) < 0.1f && Mathf.Abs (m_MovementInputValue) < 0.1f)
+        if (Mathf.Abs (m_MovementInputValue) < 0.1f && Mathf.Abs (m_TurnInputValue) < 0.1f)
         {
             if (m_MovementAudio.clip == m_EngineDriving)
             {
